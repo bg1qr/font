@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<title>Font-Br</title>
+				<style>
+								body {
+  font-family: sans-serif;
+  background-image: url('goj.jpg');
+  background-size: cover;
+  margin: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #8098ff;
+  background: #fff;
+  border-radius: 8px;
+}
+
+
+
+#results {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #8098ff;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+#results p {
+  padding: 10px;
+  background: #fff;
+  margin: 1px;
+  border: 1px solid #000;
+  border-radius: 1px;
+}
+#textbox{
+				outline: none;
+				background: #e3e3d0;
+				border: 1px solid #000;
+				width: 100%;
+				height: 30px;
+				border-radius: 5px;
+}
+#textbox button{
+				outline: none;
+				height: 25px;
+				margin: 3px;
+				background: #c6c6b6;
+				border: 1px solid #e3e3d0;
+				border-radius: 5px;
+}
+#textbox input{
+				outline: none;
+				background: #e3e3d0;
+				border: 1px solid #e3e3d0;
+}
+.pd{
+				padding: 0;
+				color: #8098ff;
+				border-radius: 5px;
+}
+				</style>
+</head>
+<body> 
+				<div id="mun">
+								<h1>Text Decoration</h1> 
+								
+				<div id="textbox">
+								<center>
+								<input type="text" id="inputText" placeholder="Enter Text"> 
+				<button onclick="convertText()">Decoration</button> 
+				</center>
+				</div>
+				</div>
+				<div id="results">
+								
+				</div>
+				<center>
+<div class="pd" id ="pd">
+				<p >©Copyright 2024 | @b_4qr <br>My channel | @python_pa </p>
+</div>
+</center> 
+</body>
+<script>
+
+const mun = document.getElementById("mun");
+const pd = document.getElementById("pd");
+const resultsDiv = document.getElementById("results");
+const data = [];
+resultsDiv.style.display="none";
+  mun.style.display="block";
+function convertToBold(text) {
+  const charMap = {
+"a":"𝗔","b":"𝗕","c":"𝗖","d":"𝗗","e":"𝗘","f":"𝗙","g":"𝗚","h":"𝗛","i":"𝗜","j":"𝗝","k":"𝗞","l":"𝗟","m":"𝗠","n":"𝗡","o":"𝗢","p":"𝗣","q":"𝗤","r":"𝗥","s":"𝗦","t":"𝗧","u":"𝗨","v":"𝗩","w":"𝗪","x":"𝗫","y":"𝗬","z":"𝗭"   
+  };
+
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function circleText(text) {
+  const charMap = {
+    "a":"ⓐ","b":"ⓑ","c":"ⓒ","d":"ⓓ","e":"ⓔ","f":"ⓕ","g":"ⓖ","h":"ⓗ","i":"ⓘ","j":"ⓙ","k":"ⓚ","l":"ⓛ","m":"ⓜ","n":"ⓝ","o":"ⓞ","p":"ⓟ","q":"ⓠ","r":"ⓡ","s":"ⓢ","t":"ⓣ","u":"ⓤ","v":"ⓥ","w":"ⓦ","x":"ⓧ","y":"ⓨ","z":"ⓩ"
+  };
+
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function oneText(text) {
+  const charMap = {'a': '𝖆', 'b': '𝖇', 'c': '𝖈', 'd': '𝖉', 'e': '𝖊', 'f': '𝖋', 'g': '𝖌', 'h': '𝖍', 'i': '𝖎', 'j': '𝖏', 'k': '𝖐', 'l': '𝖑', 'm': '𝖒', 'n': '𝖓', 'o': '𝖔', 'p': '𝖕', 'q': '𝖖', 'r': '𝖗', 's': '𝖘', 't': '𝖙', 'u': '𝖚', 'v': '𝖛', 'w': '𝖜', 'x': '𝖝', 'y': '𝖞', 'z': '𝖟'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function twoText(text) {
+  const charMap = {'a': 'a', 'b': 'ɮ', 'c': 'ᴄ', 'd': 'ɖ', 'e': 'ɛ', 'f': 'ʄ', 'g': 'ɢ', 'h': 'ɦ', 'i': 'ɨ', 'j': 'ʝ', 'k': 'ҡ', 'l': 'ʟ', 'm': 'ʍ', 'n': 'ռ', 'o': 'օ', 'p': 'ք', 'q': 'զ', 'r': 'ʀ', 's': 's', 't': 't', 'u': 'ʊ', 'v': 'ʋ', 'w': 'ա', 'x': 'x', 'y': 'ʏ', 'z': 'ʐ'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function threeText(text) {
+  const charMap = {'a': 'ᴀ', 'b': 'ʙ', 'c': 'ᴄ', 'd': 'ᴅ', 'e': 'ᴇ', 'f': 'ғ', 'g': 'ɢ', 'h': 'ʜ', 'i': 'ɪ', 'j': 'ᴊ', 'k': 'ᴋ', 'l': 'ʟ', 'm': 'ᴍ', 'n': 'ɴ', 'o': 'ᴏ', 'p': 'ᴘ', 'q': 'ǫ', 'r': 'ʀ', 's': 's', 't': 'ᴛ', 'u': 'ᴜ', 'v': 'ᴠ', 'w': 'ᴡ', 'x': 'x', 'y': 'ʏ', 'z': 'ᴢ'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function fourText(text) {
+  const charMap = {'a': 'ᗩ', 'b': 'ᗷ', 'c': 'ᑕ', 'd': 'ᗪ', 'e': 'E', 'f': 'ᖴ', 'g': 'G', 'h': 'ᕼ', 'i': 'I', 'j': 'ᒍ', 'k': 'K', 'l': 'ᒪ', 'm': 'ᗰ', 'n': 'ᑎ', 'o': 'O', 'p': 'ᑭ', 'q': 'ᑫ', 'r': 'ᖇ', 's': 'ᔕ', 't': 'T', 'u': 'ᑌ', 'v': 'ᐯ', 'w': 'ᗯ', 'x': '᙭', 'y': 'Y', 'z': 'ᘔ'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function fiveText(text) {
+  const charMap = {'a': '𝒂', 'b': '𝒃', 'c': '𝒄', 'd': '𝒅', 'e': '𝒆', 'f': '𝒇', 'g': '𝒈', 'h': '𝒉', 'i': '𝒊', 'j': '𝒋', 'k': '𝒌', 'l': '𝒍', 'm': '𝒎', 'n': '𝒏', 'o': '𝒐', 'p': '𝒑', 'q': '𝒒', 'r': '𝒓', 's': '𝒔', 't': '𝒕', 'u': '𝒖', 'v': '𝒗', 'w': '𝒘', 'x': '𝒙', 'y': '𝒚', 'z': '𝒛'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function sexText(text) {
+  const charMap = {'a': '🅐', 'b': '🅑', 'c': '🅒', 'd': '🅓', 'e': '🅔', 'f': '🅕', 'g': '🅖', 'h': '🅗', 'i': '🅘', 'j': '🅙', 'k': '🅚', 'l': '🅛', 'm': '🅜', 'n': '🅝', 'o': '🅞', 'p': '🅟', 'q': '🅠', 'r': '🅡', 's': '🅢', 't': '🅣', 'u': '🅤', 'v': '🅥', 'w': '🅦', 'x': '🅧', 'y': '🅨', 'z': '🅩'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function sevenText(text) {
+  const charMap = {'a': '𝐀', 'b': '𝐁', 'c': '𝐂', 'd': '𝐃', 'e': '𝐄', 'f': '𝐅', 'g': '𝐆', 'h': '𝐇', 'i': '𝐈', 'j': '𝐉', 'k': '𝐊', 'l': '𝐋', 'm': '𝐌', 'n': '𝐍', 'o': '𝐎', 'p': '𝐏', 'q': '𝐐', 'r': '𝐑', 's': '𝐒', 't': '𝐓', 'u': '𝐔', 'v': '𝐕', 'w': '𝐖', 'x': '𝐗', 'y': '𝐘', 'z': '𝐙'} 
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function eightText(text) {
+  const charMap = {'a': '𝓐', 'b': '𝓑', 'c': '𝓒', 'd': '𝓓', 'e': '𝓔', 'f': '𝓕', 'g': '𝓖', 'h': '𝓗', 'i': '𝓘', 'j': '𝓙', 'k': '𝓚', 'l': '𝓛', 'm': '𝓜', 'n': '𝓝', 'o': '𝓞', 'p': '𝓟', 'q': '𝓠', 'r': '𝓡', 's': '𝓢', 't': '𝓣', 'u': '𝓤', 'v': '𝓥', 'w': '𝓦', 'x': '𝓧', 'y': '𝓨', 'z': '𝓩'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function nineText(text) {
+  const charMap = {'a': '𝐴', 'b': '𝒃', 'c': '𝐶', 'd': '𝐷', 'e': '𝐸', 'f': '𝐹', 'g': '𝐺', 'h': '𝐻', 'i': '𝐼', 'j': '𝐽', 'k': '𝐾', 'l': '𝐿', 'm': '𝑀', 'n': '𝑁', 'o': '𝑂', 'p': '𝑃', 'q': '𝑄', 'r': '𝑅', 's': '𝑆', 't': '𝑇', 'u': '𝑈', 'v': '𝑉', 'w': '𝑊', 'x': '𝑋', 'y': '𝑌', 'z': '𝑍'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function tenText(text) {
+  const charMap = {'a': 'ᵃ', 'b': 'ᵇ', 'c': 'ᶜ', 'd': 'ᵈ', 'e': 'ᵉ', 'f': 'ᶠ', 'g': 'ᵍ', 'h': 'ʰ', 'i': 'ᶦ', 'j': 'ʲ', 'k': 'ᵏ', 'l': 'ˡ', 'm': 'ᵐ', 'n': 'ⁿ', 'o': 'ᵒ', 'p': 'ᵖ', 'q': 'ᑫ', 'r': 'ʳ', 's': 'ˢ', 't': 'ᵗ', 'u': 'ᵘ', 'v': 'ᵛ', 'w': 'ʷ', 'x': 'ˣ', 'y': 'ʸ', 'z': 'ᶻ'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function elevenText(text) {
+  const charMap = {'a': '𝙰', 'b': '𝙱', 'c': '𝙲', 'd': '𝙳', 'e': '𝙴', 'f': '𝙵', 'g': '𝙶', 'h': '𝙷', 'i': '𝙸', 'j': '𝙹', 'k': '𝙺', 'l': '𝙻', 'm': '𝙼', 'n': '𝙽', 'o': '𝙾', 'p': '𝙿', 'q': '𝚀', 'r': '𝚁', 's': '𝚂', 't': '𝚃', 'u': '𝙺', 'v': '𝚅', 'w': '𝚆', 'x': '𝚇', 'y': '𝚈', 'z': '𝚉'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function a12Text(text) {
+  const charMap = {'a': '𝔸', 'b': '𝔹', 'c': 'ℂ', 'd': '𝔻', 'e': '𝔼', 'f': '𝔽', 'g': '𝔾', 'h': 'ℍ', 'i': '𝕀', 'j': '𝕁', 'k': '𝕂', 'l': '𝕃', 'm': '𝕄', 'n': 'ℕ', 'o': '𝕆', 'p': 'ℙ', 'q': 'ℚ', 'r': 'ℝ', 's': '𝕊', 't': '𝕋', 'u': '𝕌', 'v': '𝕍', 'w': '𝕎', 'x': '𝕏', 'y': '𝕐', 'z': 'ℤ'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function a13Text(text) {
+  const charMap = {'a': '🅰', 'b': '🅱', 'c': '🅲', 'd': '🅳', 'e': '🅴', 'f': '🅵', 'g': '🅶', 'h': '🅷', 'i': '🅸', 'j': '🅹', 'k': '🅺', 'l': '🅻', 'm': '🅼', 'n': '🅽', 'o': '🅾', 'p': '🅿', 'q': '🆀', 'r': '🆁', 's': '🆂', 't': '🆃', 'u': '🆄', 'v': '🆅', 'w': '🆆', 'x': '🆇', 'y': '🆈', 'z': '🆉'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function a14Text(text) {
+  const charMap = {'a': '🄰', 'b': '🄱', 'c': '🄲', 'd': '🄳', 'e': '🄴', 'f': '🄵', 'g': '🄶', 'h': '🄷', 'i': '🄸', 'j': '🄹', 'k': '🄺', 'l': '🄻', 'm': '🄼', 'n': '🄽', 'o': '🄾', 'p': '🄿', 'q': '🅀', 'r': '🅁', 's': '🅂', 't': '🅃', 'u': '🅄', 'v': '🅅', 'w': '🅆', 'x': '🅇', 'y': '🅈', 'z': '🅉'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+function a15Text(text) {
+  const charMap = {'a': 'ᴬ', 'b': 'ᴮ', 'c': 'ᶜ', 'd': 'ᴰ', 'e': 'ᴱ', 'f': 'ᶠ', 'g': 'ᴳ', 'h': 'ᴴ', 'i': 'ᴵ', 'j': 'ᴶ', 'k': 'ᴷ', 'l': 'ᴸ', 'm': 'ᴹ', 'n': 'ᴺ', 'o': 'ᴼ', 'p': 'ᴾ', 'q': 'ᵟ', 'r': 'ᴿ', 's': 'ˢ', 't': 'ᵀ', 'u': 'ᵁ', 'v': 'ᵛ', 'w': 'ᵂ', 'x': 'ˣ', 'y': 'ᵞ', 'z': 'ᶻ'}
+;
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    result += charMap[char.toLowerCase()] || char; 
+  }
+  return result;
+}
+
+function convertText() {
+  const inputText = document.getElementById("inputText").value;
+  resultsDiv.style.display="block";
+  mun.style.display="none";
+  pd.style.background="#8098ff";
+  pd.style.color="#fff";
+  pd.style.border="1px solid #000";
+  if(inputText == '') {
+  			resultsDiv.innerHTML =	`<p>Empty</p>`
+  			console.log('baqer')
+  }
+  else{
+  				 resultsDiv.innerHTML = ""; // Clear previous results
+  				 const convertedTexts = [
+    convertToBold(inputText),
+    circleText(inputText),
+    oneText(inputText),
+    twoText(inputText),
+    threeText(inputText),
+    fourText(inputText),
+    fiveText(inputText),
+    sexText(inputText),
+    sevenText(inputText), 
+    eightText(inputText),
+    nineText(inputText),
+    tenText(inputText),
+    elevenText(inputText),
+    a12Text(inputText),
+    a13Text(inputText),
+    a14Text(inputText),
+    a15Text(inputText)
+  ];
+  				 let output = "";
+  				 data.push(convertedTexts)
+  				 for (let i = 0; i < convertedTexts.length; i++) {
+  				 				output += `<p>${convertedTexts[i]}
+  				 				</p>
+    <br>
+    
+    `;
+  				 }
+  				 resultsDiv.innerHTML = output;
+}
+  }
+ 
+
+</script>
+
+</html>
